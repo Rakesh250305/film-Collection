@@ -1,14 +1,22 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body{
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.bg{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     animation: change 15s infinite;
+    object-fit: cover;
+    padding: 2%;
 }
 @keyframes change {
     0%{background-image: url(./bg1.jpg);}
@@ -18,6 +26,28 @@ body{
     100%{background-image: url(./bg5.jpg);} 
 }
 
+.welcome{
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    font-weight: bold;
+    background-color: black;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    animation: fade-out ease forwards;
+    animation-delay: 2s;
+    transition: 2s ease-in ;
+}
+
+@keyframes fade-out{
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+
 caption{
     font-size: 50px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -26,9 +56,9 @@ caption{
 }
 
 .film{
-    width: 65%;
+    width: 80%;
     height: auto;   
-    margin: 5% 15%;
+    margin: 5% 12%;
     border-radius: 20px;
     box-shadow: 0 10px 15px 20px rgb(213, 235, 228);
 }
